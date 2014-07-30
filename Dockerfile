@@ -23,7 +23,7 @@ VOLUME /config
 EXPOSE 8035
 
 # Install GMusicProxy
-pip install --allow-external eyed3 --allow-unverified eyed3 https://github.com/diraimondo/gmusicproxy/tarball/master
+RUN pip install --allow-external eyed3 --allow-unverified eyed3 https://github.com/diraimondo/gmusicproxy/tarball/master
 
 # Add GMusicProxy to runit
 RUN mkdir /etc/service/gmusicproxy
