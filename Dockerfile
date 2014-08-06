@@ -27,5 +27,5 @@ RUN pip install --allow-external eyed3 --allow-unverified eyed3 https://github.c
 
 # Add GMusicProxy to runit
 RUN mkdir /tmp/gmusicproxy
-ADD gmusicproxy.sh /tmp/gmusicproxy
+ADD gmusicproxy.sh /tmp/gmusicproxy/gmusicproxy.sh
 RUN /tmp/gmusicproxy/gmusicproxy.sh
