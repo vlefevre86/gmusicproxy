@@ -25,5 +25,7 @@ EXPOSE 8035
 # Install GMusicProxy
 RUN pip install --allow-external eyed3 --allow-unverified eyed3 https://github.com/diraimondo/gmusicproxy/tarball/master
 
-# run GMusic
-RUN python /usr/local/bin/GMusicProxy --config=/config/gmusicproxy.cfg --daemon --port=8035
+# Add GMusicProxy to runit
+RUN mkdir /tmp/gmusicproxy
+ADD gmusicproxy.sh /tmp/gmusicproxy
+RUN /tmp/gmusicproxy/gmusicproxy.sh
